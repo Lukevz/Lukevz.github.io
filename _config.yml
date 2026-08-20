@@ -1,0 +1,9 @@
+title: Puffin'
+description: Group fitness challenges, built on Apple Health.
+url: https://lukevz.github.io
+
+# No theme on purpose. _layouts/default.html is self-contained, so the site
+# doesn't depend on a gem resolving on GitHub's build machines — these are the
+# pages App Review opens, and they have to render every time.
+exclude:
+  - README.md

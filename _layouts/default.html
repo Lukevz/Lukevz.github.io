@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description | default: site.description }}">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1c1c1e;
+    --muted: #6b6b70;
+    --rule: #e5e5ea;
+    --link: #b4530a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131316;
+      --fg: #ececf0;
+      --muted: #9a9aa2;
+      --rule: #2c2c31;
+      --link: #f0a35e;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  .wrap { max-width: 44rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  header.site {
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.25rem;
+    align-items: baseline;
+  }
+  header.site a.brand { font-weight: 700; font-size: 1.05rem; color: var(--fg); text-decoration: none; }
+  header.site nav { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.95rem; }
+  a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  h1 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 1.5rem; letter-spacing: -0.02em; }
+  h2 { font-size: 1.3rem; margin: 2.5rem 0 0.75rem; letter-spacing: -0.01em; }
+  h3 { font-size: 1.05rem; margin: 2rem 0 0.5rem; }
+  h2 + p, h3 + p { margin-top: 0; }
+  em { color: var(--muted); font-style: normal; }
+  ul { padding-left: 1.25rem; }
+  li { margin: 0.35rem 0; }
+  hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 1.5rem; }
+  footer.site { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; }
+  footer.site a { color: var(--muted); }
+  code { background: var(--rule); padding: 0.1em 0.35em; border-radius: 4px; font-size: 0.9em; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <a class="brand" href="/">{{ site.title }}</a>
+    <nav>
+      <a href="/support/">Support</a>
+      <a href="/privacy-policy/">Privacy</a>
+      <a href="/terms-of-use/">Terms</a>
+    </nav>
+  </header>
+  <main>
+    {{ content }}
+  </main>
+  <footer class="site">
+    Puffin' for iPhone · <a href="mailto:support@puffin.app">support@puffin.app</a>
+  </footer>
+</div>
+</body>
+</html>
