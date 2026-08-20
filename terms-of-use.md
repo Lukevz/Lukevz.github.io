@@ -42,7 +42,7 @@ removed, and the accounts responsible are suspended or terminated without notice
 and without refund. Submitted text is also screened automatically against a
 prohibited-terms list at the point it is written.
 
-To report something outside the app, email **support@puffin.app**.
+To report something outside the app, email **Luke@blueskylabs.io**.
 
 ## Your content
 
@@ -70,4 +70,4 @@ terminate an account that breaches these terms.
 
 ## Contact
 
-**support@puffin.app**
+**Luke@blueskylabs.io**

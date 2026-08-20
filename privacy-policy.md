@@ -80,4 +80,4 @@ the app before they take effect.
 
 ## Contact
 
-Questions, data requests, or anything else: **support@puffin.app**.
+Questions, data requests, or anything else: **Luke@blueskylabs.io**.

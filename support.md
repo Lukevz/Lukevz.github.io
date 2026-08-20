@@ -14,7 +14,7 @@ this page is how you reach us.
 
 ## Contact us
 
-**support@puffin.app**
+**Luke@blueskylabs.io**
 
 We answer every message, and we aim to reply within 24 hours. If you're reporting
 abusive content or another person's behaviour, say so in the subject line and we
