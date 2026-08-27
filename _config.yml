@@ -7,3 +7,10 @@ url: https://lukevz.github.io
 # pages App Review opens, and they have to render every time.
 exclude:
   - README.md
+
+# Jekyll skips anything beginning with a dot, so the universal-links file would
+# never reach the built site without this. It has to be served from exactly
+# `/.well-known/apple-app-site-association` — no extension, no redirect — or iOS
+# silently falls back to opening the link in Safari.
+include:
+  - .well-known

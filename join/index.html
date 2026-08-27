@@ -1,0 +1,142 @@
+<!doctype html>
+<!--
+  The page a Puffin' invite link opens: https://lukevz.github.io/join/?code=ABC123
+
+  ⚠️ This file does not belong to this repo at runtime. It has to be copied to
+  `join/index.html` in github.com/Lukevz/Lukevz.github.io — the public Pages repo
+  described in Links.swift — and it is kept here only so it lives next to the app
+  code that generates the links. Changing the path there means shipping a new
+  build here, because `Links.invite(code:)` spells the URL out.
+
+  No Jekyll front matter on purpose: a file without it is copied verbatim, so
+  this page doesn't depend on a layout in that repo and can't be broken by one.
+
+  Why a page at all: iMessage, Slack and the rest build a preview by *fetching*
+  the URL, so only an https link can ever show a card. A `puffin://` link has
+  nothing on the other end to fetch. This page is that other end — it carries the
+  Open Graph tags the card is made from, and hands the visitor on to the app.
+
+  The card is deliberately the same for every invite. Rendering the challenge's
+  own name and cover would mean generating this page per code, which a static
+  site can't do — and it would put its name in front of every link-preview
+  crawler that sees the URL, which is exactly what the app's own invite preview
+  is throttled and anonymised to avoid.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>You're invited to a challenge on Puffin'</title>
+    <meta name="description" content="Puffin' turns the workouts you already do into friendly competition with people you know." />
+
+    <!-- The preview card. Absolute URLs: crawlers don't resolve relative ones. -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Puffin'" />
+    <meta property="og:title" content="You're invited to a challenge on Puffin'" />
+    <meta property="og:description" content="Open the invite to see the challenge, then join with one tap." />
+    <meta property="og:url" content="https://lukevz.github.io/join/" />
+    <meta property="og:image" content="https://lukevz.github.io/join/og-invite.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Two Puffin' mascots mid-run." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <style>
+      :root {
+        --peach: #fcbba0;
+        --ink: #1c1917;
+        --muted: #6b5f58;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: var(--peach);
+        color: var(--ink);
+        font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+        text-align: center;
+      }
+      main { max-width: 420px; width: 100%; }
+      img.mascots { width: 100%; max-width: 320px; height: auto; }
+      h1 { font-size: 1.6rem; margin: 8px 0 4px; }
+      p { color: var(--muted); margin: 0 0 20px; }
+      /* Monospaced and spaced out: this is the fallback for anyone who has to
+         type it in by hand, and O/0 and I/1 have to be distinguishable. */
+      .code {
+        display: inline-block;
+        font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+        font-size: 1.9rem;
+        font-weight: 700;
+        letter-spacing: 0.28em;
+        padding: 14px 8px 14px 22px;
+        margin-bottom: 20px;
+        background: rgba(255, 255, 255, 0.55);
+        border-radius: 16px;
+        min-width: 220px;
+      }
+      .open {
+        display: block;
+        padding: 16px;
+        border-radius: 999px;
+        background: var(--ink);
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .hint { font-size: 0.85rem; margin: 16px 0 0; }
+      /* Hidden until we know there's a code to show, so a visitor who lands on
+         /join/ with no query string gets a sensible page rather than "undefined". */
+      [hidden] { display: none !important; }
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <img class="mascots" src="og-invite.png" alt="Two Puffin' mascots mid-run." />
+      <h1>You're invited</h1>
+      <p>Someone wants you in their challenge on Puffin'.</p>
+
+      <div id="code" class="code" hidden></div>
+      <a id="open" class="open" href="#" hidden>Open in Puffin'</a>
+
+      <p id="nocode" class="hint" hidden>
+        This link is missing its invite code. Ask whoever sent it for the
+        six-character code, and enter it under Challenges → Join with code.
+      </p>
+      <p class="hint">
+        Don't have the app? Install Puffin', then enter the code under
+        Challenges → Join with code.
+      </p>
+    </main>
+
+    <script>
+      // Deliberately no automatic redirect. Jumping straight to `puffin://` on
+      // load shows "Safari cannot open the page" to everyone without the app
+      // installed — including every crawler-adjacent preview — so the hop is a
+      // button the visitor presses.
+      (function () {
+        var raw = new URLSearchParams(location.search).get("code") || "";
+        var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6);
+
+        if (code.length === 6) {
+          var el = document.getElementById("code");
+          el.textContent = code;
+          el.hidden = false;
+
+          var open = document.getElementById("open");
+          // Matches Links.invite(code:) in the app, which is the only thing that
+          // parses it — see Links.inviteCode(from:).
+          open.href = "puffin://join/" + code;
+          open.hidden = false;
+        } else {
+          document.getElementById("nocode").hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>

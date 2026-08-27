@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["54CC4X3922.com.lukevz.Puffin"],
+        "components": [
+          { "/": "/join", "comment": "Challenge invite, no trailing slash" },
+          { "/": "/join/*", "comment": "Challenge invite: /join/?code=ABC123" }
+        ]
+      }
+    ]
+  }
+}
