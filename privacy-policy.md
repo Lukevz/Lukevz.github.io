@@ -6,7 +6,7 @@ permalink: /privacy-policy/
 
 # Puffin' Privacy Policy
 
-_Last updated: 20 August 2026_
+_Last updated: 24 October 2026_
 
 Puffin' is a group fitness app. This policy explains exactly what it collects, why,
 where it goes, and how to get rid of it.
@@ -29,6 +29,15 @@ app or device that recorded it. We also upload daily step and active-energy tota
 **Reports and blocks.** If you report content we keep a copy of what you reported,
 so we can act on it after the original is deleted.
 
+**Anonymous usage counts.** Puffin' uses TelemetryDeck to count a few things people
+do in the app, such as starting or joining a challenge, sharing or opening an
+invite, or reacting to a workout. Each count carries only coarse details (for
+example, whether it was somebody's first challenge), plus the app version, iOS
+version, device model and language. A challenge is identified only by a one-way
+hash. TelemetryDeck never receives your account, name, email, workouts, or anything
+you write, and it sees you only as an anonymous hashed identifier that can't be
+traced back to you.
+
 ## What we never collect
 
 - **Your route.** GPS is used while you are recording a workout, to draw the map
@@ -37,9 +46,11 @@ so we can act on it after the original is deleted.
 - **Any health data beyond the list above.** No heart rate, no sleep, no weight
   history, no clinical records. Body mass is read on-device only, to estimate
   calories for a workout you record in the app, and is never transmitted.
-- **Tracking data.** Puffin' contains no advertising SDKs, no analytics SDKs and
-  no third-party trackers. We do not use the Advertising Identifier, and we never
-  ask you to allow tracking, because there is none.
+- **Tracking data.** Puffin' contains no advertising SDKs and no third-party
+  trackers. The anonymous usage counts above are only used to see which parts of
+  the app work, never for advertising, and are never combined with data from
+  other companies. We do not use the Advertising Identifier, and we never ask you
+  to allow tracking, because there is none.
 
 ## Who can see your data
 
@@ -53,6 +64,9 @@ On Supabase (PostgreSQL), the app's hosting provider, which processes this data
 solely on our instructions. Access is enforced at the database level by row-level
 security, so the rule above is applied by the database itself rather than by the
 app asking nicely. Data is encrypted in transit (TLS) and at rest.
+
+The anonymous usage counts go to TelemetryDeck, which processes them only on our
+behalf.
 
 We do **not** store Health data in iCloud, and we do **not** sell, rent or share
 your data with anyone, ever. We do not use Health data for advertising, marketing,
