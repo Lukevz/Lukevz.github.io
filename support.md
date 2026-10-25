@@ -2,7 +2,11 @@
 layout: default
 title: Support
 permalink: /support/
+canonical_url: https://www.startpuffin.com/support/
+redirect_to: https://www.startpuffin.com/support/
 ---
+
+This page has moved to [https://www.startpuffin.com/support/](https://www.startpuffin.com/support/).
 
 # Puffin' Support
 

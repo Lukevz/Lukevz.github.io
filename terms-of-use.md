@@ -2,7 +2,11 @@
 layout: default
 title: Terms of Use
 permalink: /terms-of-use/
+canonical_url: https://www.startpuffin.com/terms/
+redirect_to: https://www.startpuffin.com/terms/
 ---
+
+This page has moved to [https://www.startpuffin.com/terms/](https://www.startpuffin.com/terms/).
 
 # Puffin' Terms of Use
 

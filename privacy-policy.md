@@ -2,7 +2,11 @@
 layout: default
 title: Privacy Policy
 permalink: /privacy-policy/
+canonical_url: https://www.startpuffin.com/privacy/
+redirect_to: https://www.startpuffin.com/privacy/
 ---
+
+This page has moved to [https://www.startpuffin.com/privacy/](https://www.startpuffin.com/privacy/).
 
 # Puffin' Privacy Policy
 
