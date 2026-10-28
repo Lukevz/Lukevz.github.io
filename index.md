@@ -2,7 +2,11 @@
 layout: default
 title: Puffin’
 permalink: /
+canonical_url: https://www.startpuffin.com/
+redirect_to: https://www.startpuffin.com/
 ---
+
+[Puffin' now lives at startpuffin.com](https://www.startpuffin.com/)
 
 # Puffin'
 
