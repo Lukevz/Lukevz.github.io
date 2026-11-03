@@ -10,7 +10,7 @@ This page has moved to [https://www.startpuffin.com/privacy/](https://www.startp
 
 # Puffin' Privacy Policy
 
-_Last updated: 24 October 2026_
+_Last updated: 3 November 2026_
 
 Puffin' is a group fitness app. This policy explains exactly what it collects, why,
 where it goes, and how to get rid of it.
@@ -50,7 +50,7 @@ traced back to you.
 - **Any health data beyond the list above.** No heart rate, no sleep, no weight
   history, no clinical records. Body mass is read on-device only, to estimate
   calories for a workout you record in the app, and is never transmitted.
-- **Tracking data.** Puffin' contains no advertising SDKs and no third-party
+- **Tracking data.** The Puffin' app contains no advertising SDKs and no third-party
   trackers. The anonymous usage counts above are only used to see which parts of
   the app work, never for advertising, and are never combined with data from
   other companies. We do not use the Advertising Identifier, and we never ask you
@@ -76,6 +76,12 @@ We do **not** store Health data in iCloud, and we do **not** sell, rent or share
 your data with anyone, ever. We do not use Health data for advertising, marketing,
 or any form of use-based data mining, as required by Apple's HealthKit terms.
 
+## Our website
+
+startpuffin.com is hosted by Vercel, which keeps standard server logs. We use
+Vercel Web Analytics to count page views. It sets no cookies and records the page,
+referrer, country and device type, never who you are.
+
 ## Deleting your data
 
 Settings → Delete account removes your profile, workouts, daily totals, reactions
@@ -90,6 +96,9 @@ under Sharing → Apps, or turn off location in iOS Settings → Privacy & Secur
 
 Puffin' is not directed at children under 13, and we do not knowingly collect data
 from them.
+
+If we learn that we've collected personal information from a child under 13,
+we'll delete it. If you think that's happened, email **Luke@blueskylabs.io**.
 
 ## Changes
 
