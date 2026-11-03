@@ -10,7 +10,7 @@ This page has moved to [https://www.startpuffin.com/terms/](https://www.startpuf
 
 # Puffin' Terms of Use
 
-_Last updated: 20 August 2026_
+_Last updated: 3 November 2026_
 
 By creating an account you agree to these terms. If you do not agree, do not use
 the app.
@@ -42,8 +42,9 @@ Every comment, workout and account in Puffin' can be reported from inside the ap
 and any user can be blocked instantly — blocking is immediate and mutual.
 
 **We review every report within 24 hours.** Content that breaches these terms is
-removed, and the accounts responsible are suspended or terminated without notice
-and without refund. Submitted text is also screened automatically against a
+removed, and the accounts responsible are suspended or terminated without notice.
+Puffin' Points have no cash value and can't be bought, sold or exchanged for money.
+Submitted text is also screened automatically against a
 prohibited-terms list at the point it is written.
 
 To report something outside the app, email **Luke@blueskylabs.io**.
@@ -52,6 +53,9 @@ To report something outside the app, email **Luke@blueskylabs.io**.
 
 You keep ownership of what you post. You grant us only the licence needed to store
 it and show it to the other members of your groups.
+
+Puffin' may decline any request for a custom item, including one that would copy
+someone else's character, logo, brand or design.
 
 ## Health and fitness — not medical advice
 
