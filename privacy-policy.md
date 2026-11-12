@@ -47,7 +47,10 @@ traced back to you.
 - **Your route.** GPS is used while you are recording a workout, to draw the map
   and measure distance. The route is written to Apple Health on your iPhone and is
   **never uploaded to our servers**. Nobody else can see where you ran.
-- **Any health data beyond the list above.** No heart rate, no sleep, no weight
+- **Your heart rate.** When you record a workout on Apple Watch, Puffin' reads your
+  heart rate to show it on the Watch and saves it with the workout in Apple Health.
+  It stays on your Watch and in Apple Health and is **never uploaded to our servers**.
+- **Any other health data beyond the list above.** No sleep, no weight
   history, no clinical records. Body mass is read on-device only, to estimate
   calories for a workout you record in the app, and is never transmitted.
 - **Tracking data.** The Puffin' app contains no advertising SDKs and no third-party
